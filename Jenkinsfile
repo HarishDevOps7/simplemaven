@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo '----------- build started ----------'
-                sh 'mvn clean package -Dmaven.test.skip=true'
+                sh 'mvn clean package'
                 echo '----------- build completed ----------'
             }
         }
