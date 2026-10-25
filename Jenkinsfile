@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -11,7 +10,7 @@ pipeline {
 
         stage('SonarQube Code Analysis') {
             steps {
-                withSonarQubeEnv('MySonarQube') {
+                withSonarQubeEnv('SonarQube') {
                     sh '''
                         /opt/maven/bin/mvn \
                         org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
